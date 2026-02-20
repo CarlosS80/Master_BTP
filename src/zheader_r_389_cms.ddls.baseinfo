@@ -6,7 +6,10 @@
 "ZHEADER_CMS"
 ],
 "ASSOCIATED":
-[],
+[
+"/DMO/I_OVERALL_STATUS_VH",
+"ZC_ITEMS_CMS"
+],
 "BASE":
 [],
 "ANNO_REF":

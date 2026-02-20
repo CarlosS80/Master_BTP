@@ -1,0 +1,129 @@
+@Metadata.layer: #CORE
+
+@UI: { headerInfo: { typeName: 'Header',
+                     typeNamePlural: 'Headers',
+                     title: { type: #STANDARD,
+                              value: 'Id' } },
+       presentationVariant: [{ sortOrder: [{ by: 'Id',
+                                             direction: #ASC }],
+                               visualizations: [{ type: #AS_LINEITEM }] }] }
+                               
+annotate entity ZHEADER_C_CMS
+    with 
+{
+  @UI.facet: [{ id: 'Header',
+                purpose: #STANDARD,
+                type: #IDENTIFICATION_REFERENCE,
+                label: 'Header',
+                position: 10 },
+
+              { id: 'Item',
+                purpose: #STANDARD,
+                type: #LINEITEM_REFERENCE,
+                label: 'Item',
+                position: 20,
+                targetElement: '_Item' } ]
+
+  @UI.hidden: true
+  HeaderUUID;
+
+  @UI: { lineItem: [{ position: 10,
+                      importance: #HIGH },
+                    
+                     { position: 10,
+                       importance: #HIGH,
+                       type: #FOR_ACTION,
+                       dataAction: 'accept',
+                       label: 'Accept' },
+                     
+                     { position: 20,
+                       importance: #HIGH,
+                       type: #FOR_ACTION,
+                       dataAction: 'reject',
+                       label: 'Reject' },
+                     
+                     { position: 30, 
+                       importance: #HIGH,
+                       type: #FOR_ACTION,
+                       dataAction: 'deductDiscount',
+                       label: 'Discount',
+                       invocationGrouping: #CHANGE_SET }                   
+                   ],
+
+          selectionField: [{ position: 10 }],
+
+          identification: [{ position: 10, label: 'Header ID' },
+                           
+                           { type: #FOR_ACTION,
+                             dataAction: 'accept',
+                             label: 'Accept',
+                             position: 10 },
+                             
+                           { type: #FOR_ACTION,
+                             dataAction: 'reject',
+                             label: 'Reject',
+                             position: 20 },
+                           
+                            { type: #FOR_ACTION,
+                             dataAction: 'deductDiscount',
+                             label: 'Discount',
+                             position: 30 }
+                          ]
+       }
+  Id;
+
+  @UI: { lineItem: [{  position:  20, importance:  #HIGH}],
+         identification: [{ position: 20 }],
+         selectionField: [{ position: 20 }] }
+
+  Email;
+
+  @UI: { lineItem: [{  position:  30, importance:  #HIGH}],
+         identification: [{ position: 30 }],
+         selectionField: [{ position: 30 }] }
+  Firstname;
+
+  @UI: { lineItem: [{  position:  40, importance:  #MEDIUM }],
+        identification: [{ position: 40 }] }
+  Lastname;
+
+  @UI: { lineItem: [{  position:  50, importance:  #MEDIUM }],
+        identification: [{ position: 50 }] }
+  Country;
+
+  @UI: { lineItem: [{  position:  60, importance:  #HIGH }],
+        identification: [{ position: 60 }] }
+  Createon;
+
+  @UI: { lineItem: [{  position:  70, importance:  #HIGH }],
+          identification: [{ position: 70 }] }
+  Deliverydate;
+
+  @UI: { lineItem: [{  position: 80, importance: #HIGH, label: 'ORDERSTATUS'}],
+       identification: [{ position: 80, label: 'ORDERSTATUS' }],
+       textArrangement: #TEXT_ONLY }
+  Orderstatus;
+
+
+
+//  @UI: { lineItem: [{  position:  80, importance:  #MEDIUM }],
+//          identification: [{ position: 90, label: 'Status' }],
+//          selectionField: [{ position: 40 }],
+//          textArrangement: #TEXT_ONLY }
+//  overallstatus;
+//
+//  @UI.hidden: true
+//  overallstatustext;
+
+  @UI.hidden: true
+  LocalCreatedBy;
+  @UI.hidden: true
+  LocalCreatedAt;
+  @UI.hidden: true
+  LocalLastChangedBy;
+  @UI.hidden: true
+  LocalLastChangedAt;
+  @UI.hidden: true
+  LastChangedAt;
+
+}
