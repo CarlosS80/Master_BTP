@@ -3,7 +3,9 @@
 @UI: { headerInfo: { typeName: 'Item',
                      typeNamePlural: 'Items',
                      title: { type: #STANDARD,
-                              value: 'Id' } } }
+                              value: 'Id',
+                              label: 'ID'
+                              } } }
 
 annotate entity ZC_ITEMS_C_CMS with
 {
@@ -50,10 +52,10 @@ annotate entity ZC_ITEMS_C_CMS with
          selectionField: [{ position: 70 }] }
   Price;
 
-  @UI: { lineItem: [{  position:  71, importance:  #MEDIUM}],
-         identification: [{ position: 71 }],
-         selectionField: [{ position: 71 }] }  
-  Price_VE;
+//  @UI: { lineItem: [{  position:  71, importance:  #MEDIUM}],
+ //        identification: [{ position: 71 }],
+   //      selectionField: [{ position: 71 }] }  
+  //Price_VE;
 
   @UI: { lineItem: [{  position:  80, importance:  #MEDIUM}],
          identification: [{ position: 80 }],
@@ -84,5 +86,8 @@ annotate entity ZC_ITEMS_C_CMS with
          identification: [{ position: 130 }],
          selectionField: [{ position: 130 }] }
   Unitofmeasure;
+
+  @UI.hidden: true
+  LocalLastChangedAt;  
 
 }

@@ -26,13 +26,13 @@ define root view entity ZHEADER_C_CMS
       Imageurl,
       @Semantics.user.createdBy: true
       LocalCreatedBy,
-      @Semantics.systemDateTime.createdAt: true
+//      @Semantics.systemDateTime.createdAt: true
       LocalCreatedAt,
-      @Semantics.user.localInstanceLastChangedBy: true
+//      @Semantics.user.localInstanceLastChangedBy: true
       LocalLastChangedBy,
-      @Semantics.systemDateTime.localInstanceLastChangedAt: true
+//      @Semantics.systemDateTime.localInstanceLastChangedAt: true
       LocalLastChangedAt,
-      @Semantics.systemDateTime.lastChangedAt: true
+//      @Semantics.systemDateTime.lastChangedAt: true
       LastChangedAt,
 
 

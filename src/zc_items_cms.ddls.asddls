@@ -7,13 +7,13 @@
         sizeCategory: #S,
         dataClass: #MIXED }
 define view entity zc_items_cms
-  as select from zitems_cms
+  as select from zitems_cms 
 
-  association to parent zheader_r_389_cms as _header on $projection.HeaderUUID = _header.HeaderUUID
+  association to parent zheader_r_389_cms as _header on $projection.Headeruuid = _header.Headeruuid
 {
 
-  key item_uuid             as ItemUUID,
-      parent_uui            as HeaderUUID,
+  key item_uuid             as Itemuuid,
+      header_uuid           as Headeruuid,
       id                    as Id,
       name                  as Name,
       description           as Description,

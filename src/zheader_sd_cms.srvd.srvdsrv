@@ -1,5 +1,5 @@
 @EndUserText.label: 'Header  service definition'
 define service ZHEADER_SD_CMS {
   expose ZHEADER_C_CMS  as Header;
-  expose ZC_ITEMS_C_CMS as ITEM;
+  expose ZC_ITEMS_C_CMS as Item;
 }

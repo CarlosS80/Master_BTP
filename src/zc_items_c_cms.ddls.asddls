@@ -2,12 +2,13 @@
 @EndUserText.label: 'Item Projection comsuption'
 @Metadata.ignorePropagatedAnnotations: true
 @Metadata.allowExtensions: true
+//@Search.searchable: true
 
 define view entity ZC_ITEMS_C_CMS
   as projection on zc_items_cms
 {
-  key     ItemUUID,
-          HeaderUUID,
+  key     Itemuuid,
+          Headeruuid,
           Id,
           Name,
           Description,
@@ -15,9 +16,9 @@ define view entity ZC_ITEMS_C_CMS
           Discontinueddate,
           @Semantics.amount.currencyCode: 'currency'
           Price,
-          @Semantics.amount.currencyCode: 'currency'
-          @ObjectModel.virtualElementCalculatedBy: 'ABAP:ZCL_VIRTUAL_ELEM_SADL_CMS'
-  virtual Price_VE : /dmo/total_price,
+  //        @Semantics.amount.currencyCode: 'currency'
+  //        @ObjectModel.virtualElementCalculatedBy: 'ABAP:ZCL_VIRTUAL_ELEM_SADL_CMS'
+//  virtual Price_VE : /dmo/total_price,
 
           Currency,
           @Semantics.quantity.unitOfMeasure: 'unitofmeasure'

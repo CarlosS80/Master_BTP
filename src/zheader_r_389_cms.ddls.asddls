@@ -7,7 +7,7 @@ define root view entity zheader_r_389_cms
   association [1..1] to /DMO/I_Overall_Status_VH as _Orderstatus 
                 on $projection.Orderstatus = _Orderstatus.OverallStatus
 {
-  key header_uuid           as HeaderUUID,   
+  key header_uuid           as Headeruuid,   
       id                    as Id,
       email                 as Email,
       firstname             as Firstname,
